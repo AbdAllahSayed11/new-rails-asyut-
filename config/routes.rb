@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-    resources :posts
+  resources :posts
   resources :users
-#this routes here
+  #this routes here
   # get "posts/index"
   # get "posts/show"
   # get "posts/new"

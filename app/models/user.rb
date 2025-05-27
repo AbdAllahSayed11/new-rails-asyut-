@@ -1,8 +1,5 @@
 class User < ApplicationRecord
-  validates :name, presence: true
-  validates :DOB, presence: true
-  validates :email, presence: true, 
-  uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i, message: "must be a valid email address" }
- 
-  validates :phone_number, presence: true
-  validates :address, presence: true
+    has_many :posts
+    has_many :editors_posts
+    has_many :editors, through: :editors_posts, source: :user
+end
