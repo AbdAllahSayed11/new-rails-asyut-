@@ -15,6 +15,7 @@ class UsersTest < ApplicationSystemTestCase
     click_on "New user"
 
     fill_in "Address", with: @user.address
+
     fill_in "Dob", with: @user.dob
     fill_in "Email", with: @user.email
     fill_in "Name", with: @user.name
@@ -30,6 +31,7 @@ class UsersTest < ApplicationSystemTestCase
     click_on "Edit this user", match: :first
 
     fill_in "Address", with: @user.address
+
     fill_in "Dob", with: @user.dob
     fill_in "Email", with: @user.email
     fill_in "Name", with: @user.name
